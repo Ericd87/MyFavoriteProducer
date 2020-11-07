@@ -10,7 +10,7 @@ public class Producer {
 
 
 
-    public Long getid() {
+    public Long getId() {
         return id;
     }
 
@@ -32,10 +32,10 @@ public class Producer {
 
     public Producer(Long id, String name, String description, String awards, String hits){
         this.id=id;
-        this.name=name;
-        this.description=description;
-        this.awards=awards;
-        this.hits=hits;
+        this.name= name;
+        this.description= description;
+        this.awards= awards;
+        this.hits= hits;
     }
 
 

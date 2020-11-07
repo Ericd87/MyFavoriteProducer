@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:text="${producerModel.name}">A course</title>
+</head>
+<body>
+
+<header>
+    <h1 th:text="${producerModel.name}">A Course</h1>
+</header>
+
+<main>
+    <ul>
+        <p><a href="/producers">Courses</a></p>
+        <li th:text="${producerModel.name}"></li>
+    </ul>
+    <h2 th:text="${producerModel.description}"></h2>
+</main>
+
+<footer>
+    <small>&copy wcci 2020 </small>
+</footer>
+
+</body>
+</html>

@@ -2,12 +2,10 @@ package org.wecancodeit.myfavoriteproducers;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.Collection;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-
-
-import java.util.Collection;
 
 
 public class ProducerRepositoryTest {
@@ -28,7 +26,7 @@ public class ProducerRepositoryTest {
     }
 
     @Test
-    public void shouldFindProducerOneAndTwo() {
+    public void shouldFindProducerOneAndProducerTwo() {
         Producer producerPharrell = new Producer(1L, "producer Pharrell Williams", "Music Producer, Singer,Song Writer, Film Producer", "13", "20 song on Billboard 100");
         Producer producerTimbaland = new Producer(2L, "producer Timberland", "Music Producer, Dj,Song Writer, Rapper, Record Executive", "4", "19 song on Billboard 100");
         producerTest = new ProducerRepository(producerPharrell, producerTimbaland);
@@ -36,6 +34,8 @@ public class ProducerRepositoryTest {
         assertThat(foundProducers).contains(producerPharrell, producerTimbaland);
 
     }
+
+
 
 
 }
