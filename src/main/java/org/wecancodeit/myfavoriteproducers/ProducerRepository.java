@@ -12,8 +12,8 @@ public class ProducerRepository {
     Map<Long, Producer> producerList = new HashMap<>();
 
     public ProducerRepository(){
-        Producer Pharrell = new Producer(1L, "producer Pharrell Williams", "Music Producer, Singer,Song Writer, Film Producer", "13", "20 songs on Billboard 100");
-        Producer Timbaland = new Producer(2L, "producer Timbaland", "Music Producer, Dj,Song Writer, Rapper, Record Executive", "4", "19 songs on Billboard 100");
+        Producer Pharrell = new Producer(1L, "Pharrell Williams", "Music Producer, Singer,Song Writer, Film Producer", "13", "20 songs on Billboard 100");
+        Producer Timbaland = new Producer(2L, " Timbaland", "Music Producer, Dj,Song Writer, Rapper, Record Executive", "4", "19 songs on Billboard 100");
         Producer MannieFresh = new Producer(3L, "Mannie Fresh", "Dj, Music Producer, Recording Engineer, Song Writer, Rapper", "0", "6 songs on Billboard 100");
         Producer Southside = new Producer(4L, "Southside", "Music Producer, Rapper, Beat Maker", "0", "5 songs on Billboard 100");
 
@@ -31,7 +31,7 @@ public class ProducerRepository {
 
         }
      }
-     public Producer findOne(long id){ return producerList.get(id); }
+     public Producer findOne(Long id){ return producerList.get(id); }
 
      public Collection<Producer> findAll(){ return producerList.values(); }
 

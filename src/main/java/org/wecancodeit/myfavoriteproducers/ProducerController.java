@@ -15,15 +15,16 @@ public class ProducerController {
     private ProducerRepository producerRepo;
 
     @RequestMapping("/producers")
-    public String findAllProducers(Model model, long id) throws ProducerNotFoundException {
+    public String findAllProducers(Model model, Long id) throws ProducerNotFoundException {
         model.addAttribute("producersModel", producerRepo.findAll());
         return "producersTemplate";
+    }
 
 
     @RequestMapping("/producer")
-    public String findOneProducer(@RequestParam(value ="id")Long id, Model model){
+    public String findOneProducer(@RequestParam(value ="id")Long id, Model model) throws ProducerNotFoundException {
 
-        if(producerRepo,findOneProducer(id)) == null){
+        if(producerRepo.findOne(id) == null){
             throw new ProducerNotFoundException();
             }
 
@@ -31,9 +32,7 @@ public class ProducerController {
             return "producerTemplate";
 
         }
-
 }
 
-    private void findOneProducer(long id) {
-    }
+
 
